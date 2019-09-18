@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var arr = [100, 200, "abc", true, 300, 600];
+    console.log(arr);
+    /*数组的属性：length属性可以获取数组的长度*/
+    console.log(arr.length);
+
+    /*数组遍历方式1*/
+    for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+
+    /*数组遍历方式2:增强遍历*/
+    for(var i in arr){
+        //i还是下标
+        console.log(arr[i]);
+    }
+
+
+</script>
+
+</body>
+</html>

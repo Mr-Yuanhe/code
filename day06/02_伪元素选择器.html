@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span{
+            color: blue;
+        }
+
+        span::after{
+            /*伪元素选择器中，需要拥有一个content样式*/
+            content: ",觉得很好，直接买下来了！";
+            color: green;
+        }
+        span::before{
+            /*伪元素选择器中，需要拥有一个content样式*/
+            content: "天气不错,";
+            color: red;
+        }
+
+    </style>
+
+</head>
+<body>
+    <span>明天去别墅轰趴</span>
+</body>
+</html>

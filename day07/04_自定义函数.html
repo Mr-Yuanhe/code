@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    /*定义一个函数*/
+    function fn(a,b,c,d) {
+        console.log("函数不调用不执行!")
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+    }
+    
+    
+    function fn() {
+        console.log("测试函数被覆盖");
+    }
+
+
+    /*调用函数*/
+    fn();
+
+    fn(100,200);
+
+    fn(1000,2000,"abc",true,10086);
+
+</script>
+
+</body>
+</html>

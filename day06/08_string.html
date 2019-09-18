@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var str = 'abc123123qwer';
+
+    /*length属性可以获取字符串长度*/
+    console.log(str.length);//13
+
+    /*charAt(index) 返回在指定索引位置的字符。 */
+    console.log(str.charAt(4));//2,编程的世界，从0开始
+
+    /*indexOf(String,[number]) 检索字符串。返给检索的字符串在该字符串的起始位置*/
+    console.log(str.indexOf("123"));//3
+    console.log(str.indexOf("123", 5));//6
+
+    /*concat() 连接字符串。*/
+    console.log(str.concat("df"));
+
+    /*split(separator) 把字符串分割为字符串数组。*/
+    var s = "a-b-c-d-1-2-3-4";
+    var arr = s.split("-");
+    console.log(arr);
+
+    /*substring(startIndex,endIndex) 提取字符串中两个指定的索引号之间的字符。(前包后不包) */
+    console.log(str.substring(3,8));//12312
+
+    /*substr(startIndex,length) 从起始索引号提取字符串中指定数目的字符。 */
+    console.log(str.substr(3,8));//123123qw
+</script>
+
+</body>
+</html>

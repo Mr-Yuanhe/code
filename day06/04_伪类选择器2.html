@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*:first-child p:first-child 选择属于父元素的第一个子元素的每个 <p> 元素。 */
+        p:first-child{
+            color: red;
+        }
+
+        /*:last-child p:last-child 选择属于其父元素最后一个子元素每个 <p> 元素。 */
+        p:last-child{
+            color: blue;
+        }
+
+        /*:nth-child(n) p:nth-child(3) 选择属于其父元素的第3个子元素的每个 <p> 元素。 */
+        p:nth-child(3){
+            background-color: #ccc;
+        }
+
+    </style>
+
+</head>
+<body>
+    <p>百香果111</p>
+    <p>百香果222</p>
+    <div>
+        <p>苹果111</p>
+        <p>苹果222</p>
+        <p>苹果333</p>
+        <p>苹果444</p>
+        <p>苹果555</p>
+    </div>
+    <p>芒果111</p>
+    <p>芒果222</p>
+</body>
+</html>

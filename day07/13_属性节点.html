@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" name="season" value="spring" id="season">
+    <br>
+    <button onclick="fn1()">获取input框中的value</button>
+    <button onclick="fn2()">改变input框中的value</button>
+    <script>
+        function fn1() {
+            //获取元素节点
+            var inputNode = document.getElementById("season");
+            //通过元素节点操作属性节点
+            //方式1,通过元素节点的value属性获取value值
+            var v =  inputNode.value;
+            console.log(v);
+            //方式2,通过元素节点的方法获取value值
+            var v2 = inputNode.getAttribute("value");
+            console.log(v2);
+        }
+
+
+        function fn2() {
+            //获取元素节点
+            var inputNode = document.getElementById("season");
+            //方式1,通过元素节点的value属性修改value值
+            //inputNode.value="autumn";
+
+            //方式2,通过元素节点的方法修改value值
+            inputNode.setAttribute("value","winter");
+        }
+    </script>
+</body>
+</html>

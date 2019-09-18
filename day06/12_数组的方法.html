@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    var arr = [100,200,300,"abc",500,1000];
+    console.log(arr);//[100, 200, 300, "abc", 500, 1000]
+
+    /*unshift() 向数组的开头添加一个或更多元素，并返回新的长度。*/
+    arr.unshift("aaa",10086);
+    console.log(arr);//["aaa", 10086, 100, 200, 300, "abc", 500, 1000]
+    /*shift() 删除并返回数组的第一个元素*/
+    arr.shift();
+    console.log(arr);//[10086, 100, 200, 300, "abc", 500, 1000]
+
+
+    /*push() 向数组的末尾添加一个或更多元素，并返回新的长度。*/
+    arr.push("bbb",10010);
+    console.log(arr);//[10086, 100, 200, 300, "abc", 500, 1000, "bbb", 10010]
+    /*pop() 删除并返回数组的最后一个元素*/
+    arr.pop();
+    console.log(arr);//[10086, 100, 200, 300, "abc", 500, 1000, "bbb"]
+
+    /*splice(index,howmany,item1,.....,itemX) 删除元素，并向数组添加新元素。 */
+    arr.splice(2,1,"520",1314);
+    console.log(arr);
+
+</script>
+
+</body>
+</html>

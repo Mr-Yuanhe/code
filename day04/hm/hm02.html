@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #box{
+            border: 1px solid #ABCDE9;
+            width: 172px;
+            /*让固定宽度的div居中*/
+            margin: 0px auto;
+            background-color: #f5f9fc;
+
+            /*给div设置内边距*/
+            padding: 3px;
+        }
+        #box>h4{
+            line-height: 30px;
+            text-indent: 1.2em;
+            background: url("img/title_icon.gif") no-repeat  1px 8px;
+            color: #27335D;
+        }
+        #box>ul{
+            list-style: none;
+        }
+        #box>ul>li{
+            line-height: 30px;
+            background: url("img/submenu.gif") no-repeat  0px 0px;
+            /*给li添加上边框*/
+            border-top: 1px solid #ABCDE9;
+
+        }
+        #box>ul>li>a{
+            color: #000002;
+            text-decoration: none;
+        }
+        /*鼠标悬浮在li上，让对应的a有样式*/
+        #box>ul>li:hover>a{
+            color: #FE6915;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="box">
+        <h4>课程导航</h4>
+        <ul>
+            <li><a href="#">软件工程师</a></li>
+            <li><a href="#">软件测试工程师</a></li>
+            <li><a href="#">网络工程师</a></li>
+            <li><a href="#">网站工程师</a></li>
+            <li><a href="#">启蒙星</a></li>
+            <li><a href="#">软件工程师</a></li>
+            <li><a href="#">软件工程师</a></li>
+            <li><a href="#">软件工程师</a></li>
+            <li><a href="#">网络营销</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>你最想去的城市</h1>
+    <ul id="city">
+        <li>南京</li>
+        <li id="bj">北京</li>
+        <li>上海</li>
+        <li>东莞</li>
+    </ul>
+
+    <button onclick="fn1()">获取子节点</button>
+    <button onclick="fn2()">获取父节点</button>
+    <script>
+        function fn1() {
+            var ulNodes =  document.getElementById("city");
+            console.log(ulNodes);
+
+            var nodes =  ulNodes.childNodes;
+            /*空格和换行都是文本节点*/
+            console.log(nodes);
+            console.log(nodes.length);//9
+
+        }
+
+        function fn2() {
+            var bjNode = document.getElementById("bj");
+            var ulNode =  bjNode.parentNode;
+            console.log(ulNode);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    var arr = [10086, "1abc",100,120,true,"abc"];
+
+    /*sort() 对数组的元素进行排序（字典码排序：一位一位的比较，数字优先，按字母顺序）*/
+    var temp =  arr.sort();
+    console.log(temp);//[100,10086,120,1abc,abc,true]
+
+    arr = [10086, "1abc",100,120,true,"abc"];
+    /*reverse() 颠倒数组中元素的顺序。*/
+    var arr2 = arr.reverse();
+    console.log(arr2);
+
+    arr = [10086, "1abc",100,120,true,"abc"];
+    /*slice() 从某个已有的数组返回选定的元素 (前包后不包)*/
+    var temp = arr.slice(2,4);
+    console.log(temp);//[100, 120]
+
+    var arr3 = ["a","b","c","d"];
+    /*join() 把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。 */
+    var str = arr3.join("-");
+    console.log(str);//a-b-c-d
+
+</script>
+
+</body>
+</html>

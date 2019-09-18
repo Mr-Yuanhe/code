@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*注释中的内容*/
+
+
+    </style>
+</head>
+<body>
+
+<script>
+
+    //单行注释
+    var num = 10086;
+    var str01 = "10086";
+
+    /*多行注释*/
+
+
+    /**
+     * 被编译的时候会保留的注释
+     *
+     */
+
+    console.log(num==str01);//true
+    console.log(num===str01);//false
+
+    var str02 = new String("10086");//引用类型
+    console.log(num);
+    console.log(str01);
+    console.log(str02);
+
+    console.log(str01==str02);//true
+    console.log(str01===str02);//false
+
+    var str03 = new String("10086");
+    console.log(str02==str03);//false
+    console.log(str02===str03);//false
+
+</script>
+
+</body>
+</html>

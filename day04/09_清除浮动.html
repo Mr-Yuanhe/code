@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            border: 3px solid blue;
+            overflow: hidden;
+        }
+        #box>div{
+
+            background-color: yellowgreen;
+            border: 3px solid red;
+        }
+        #d1{
+            height: 200px;
+            float: left;
+        }
+        #d2{
+            height: 100px;
+            float: right;
+        }
+        #d3{
+            height: 200px;
+            float: right;
+        }
+
+        .clearFix{
+            /*clear: both;*/
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <div id="box">
+        <div id="d1">我是第一个div</div>
+        <div id="d2">我是第二个div</div>
+        <div id="d3">我是第3个div</div>
+    </div>
+    <div  class="clearFix">
+        浮动不要给我带来影响！
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+</head>
+<body>
+
+<form action="success.html" method="get" autocomplete="off">
+    <div>
+        <label>手机号码</label>
+        <input type="text" name="phone" placeholder="请输入一个正确的手机号码" pattern="^1[3|4|5|7|8|9]\d{9}$" autocomplete="on">
+    </div>
+    <div>
+        <label>密码</label>
+        <input type="password" name="pwd" required autofocus>
+    </div>
+    <div>
+        <label>年龄</label>
+        <input type="number" name="age" max="180" min="0" step="2">
+    </div>
+    <div>
+        <label>性别</label>
+        <!--checked="checked"表示默认选中，可以简写checked-->
+        <input type="radio" name="gender" value="0">女
+        <input type="radio" name="gender" value="1" checked>男
+    </div>
+    <div>
+        <label>地址</label>
+        <select name="address" multiple>
+            <option value="0">---请选择一个地址---</option>
+            <option value="025">江苏南京</option>
+            <option value="0514" selected>江苏扬州</option>
+            <option value="0101">安徽合肥</option>
+            <option value="110">广东东莞</option>
+        </select>
+    </div>
+    <div>
+        <input type="submit" value="提交数据">
+
+    </div>
+</form>
+
+</body>
+</html>

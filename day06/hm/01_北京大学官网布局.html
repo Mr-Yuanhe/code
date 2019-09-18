@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*公共的样式*/
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        .clearFix{
+            overflow: hidden;
+        }
+
+        #box{
+            width: 970px;
+            margin: 20px auto;
+        }
+
+        #box>.c1{
+            height: 103px;
+        }
+        #box>.c1>.logo{
+            height: 103px;
+            width: 277px;
+            background-color: red;
+        }
+        #box>.c1>.language{
+            height: 49px;
+            width: 137px;
+            background-color: greenyellow;
+        }
+        #box>.c1>.navbar{
+            height: 46px;
+            width: 679px;
+            background-color: greenyellow;
+            margin-top: 8px;
+        }
+
+
+        #box>.c2{
+            height: 435px;
+            margin: 10px 0px;
+        }
+        #box>.c2>.banner{
+            height: 435px;
+            width: 310px;
+            background-color: orange;
+
+        }
+        #box>.c2>.content{
+            height: 435px;
+            width: 650px;
+        }
+
+        #box>.c2>.content>.news{
+            height: 240px;
+            width: 450px;
+            background-color: deepskyblue;
+        }
+        #box>.c2>.content>.hot{
+            height: 400px;
+            width: 190px;
+            background-color: purple;
+        }
+        #box>.c2>.content>.notice{
+            height: 110px;
+            width: 450px;
+            background-color: deepskyblue;
+            margin: 10px 0px;
+        }
+        #box>.c2>.content>.msg{
+            height: 30px;
+            width: 450px;
+            background-color: deepskyblue;
+            margin-bottom: 10px;
+        }
+        #box>.c2>.content>.nav{
+            height: 25px;
+            width: 650px;
+            background-color: darkgreen;
+        }
+
+        #box>.c3{
+            height: 35px;
+            background-color: blue;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <div id="box">
+        <div class="c1 clearFix">
+            <div class="logo left"></div>
+            <div class="language right"></div>
+            <div class="navbar right"></div>
+        </div>
+        <div class="c2 clearFix">
+            <div class="banner left"></div>
+            <div class="content right clearFix">
+                <div class="news left"></div>
+                <div class="hot right"></div>
+                <div class="notice left"></div>
+                <div class="msg left"></div>
+                <div class="nav left"></div>
+            </div>
+        </div>
+        <div class="c3"></div>
+    </div>
+
+</body>
+</html>

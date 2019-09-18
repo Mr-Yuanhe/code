@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>你最想去的城市</h1>
+    <ul id="city">
+        <li>南京</li>
+        <li id="bj">北京</li>
+        <li>上海</li>
+        <li>东莞</li>
+        <!--<li>杭州</li>-->
+    </ul>
+    <button onclick="fn1()">添加节点</button>
+    <button onclick="fn2()">删除节点</button>
+
+    <script>
+        function fn1() {
+            //1、创建li节点
+            var liNode = document.createElement("li");
+
+            //2、给li节点添加文本值
+            liNode.textContent="杭州";
+
+            //3、获取ul节点
+            var ulNode = document.getElementById("city");
+
+            //4、把创建的节点添加到ul的末尾
+            ulNode.appendChild(liNode);
+        }
+
+        function fn2() {
+            //1、获取北京相关的节点
+            var bjNode = document.getElementById("bj");
+
+            //2、删除该节点
+            bjNode.remove();
+        }
+    </script>
+
+</body>
+</html>

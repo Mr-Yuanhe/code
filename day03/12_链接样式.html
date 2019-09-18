@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        /*需求：把链接改成一下要求（没有访问过的时候是深灰色，鼠标放在上面是蓝色，鼠标点击的时候是红色，访问过的连接变为淡灰色）*/
+
+        /*a:link - 普通的、未被访问的链接   "深灰色#555"  */
+        /*a:visited - 用户已访问的链接*   "淡灰色#eee"/
+        /*a:hover - 鼠标指针位于链接的上方 "蓝色blue"*/
+        /*a:active - 链接被点击的时刻    "红色red" */
+        a {
+            text-decoration: none;
+        }
+
+        a:link{
+            color: #555;
+
+        }
+        a:visited{
+            color: #eee;
+        }
+        a:hover{
+            color: blue;
+        }
+        a:active{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="https://www.baidu.com/">百度</a>
+    <a href="https://www.taobao.com/">淘宝</a>
+
+</body>
+</html>

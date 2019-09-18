@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            border: 3px solid blue;
+            height: 80px;
+            width: 400px;
+        }
+        #d2{
+            /*元素隐藏：且不占空间*/
+            /*display: none;*/
+
+            /*隐藏元素，并且占空间*/
+            visibility: hidden;
+        }
+
+        #s1,#s2{
+            border: 3px solid orange;
+            height: 80px;
+            width: 400px;
+            display: inline-block;
+
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <div>111</div>
+    <div id="d2">222</div>
+    <div>333</div>
+    <hr>
+    <span id="s1">我是行内元素</span>
+    <span id="s2">我是行内元素</span>
+
+
+</body>
+</html>

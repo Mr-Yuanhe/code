@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        /*下一兄弟选择器（复合选择器中的一种：+）*/
+
+        /*item的下一个兄弟，且为li的元素*/
+        #item + li{
+            border: 3px solid red;
+        }
+
+        li+li{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>苹果</li>
+        <li>芒果</li>
+        <li id="item">百香果</li>
+        <li>奇异果</li>
+        <li>无花果</li>
+    </ul>
+
+</body>
+</html>

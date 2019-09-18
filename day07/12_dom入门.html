@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom入门</title>
+</head>
+<body>
+    <h1>你最想去的城市</h1>
+    <ul>
+        <li>南京</li>
+        <li id="bj">北京</li>
+        <li>上海</li>
+        <li>东莞</li>
+    </ul>
+    <h1>四季</h1>
+    <input type="text" name="season" value="spring">
+    <input type="text" name="season" value="summer">
+    <input type="text" name="season" value="autumn">
+    <input type="text" name="season" value="winter">
+
+    <script>
+
+
+        /*getElementById() 根据id获取对应的元素节点。*/
+        var liNode = document.getElementById("bj");
+        console.log(liNode);
+
+        /*getElementsByTagName() 根据标签名获取元素们。*/
+        var liNodes = document.getElementsByTagName("li");
+        console.log(liNodes);
+
+        /*getElementsByName() 根据name属性的值获取元素们。*/
+        var inputNodes = document.getElementsByName("season");
+        console.log(inputNodes);
+
+
+    </script>
+
+</body>
+</html>

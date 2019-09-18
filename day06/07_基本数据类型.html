@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+
+        var i;
+        console.log(i);//undefined
+        /*typeof关键字可以查看变量的基本类型*/
+        console.log(typeof i);//类型是undefined
+
+        i=100;
+        console.log(i);//100
+        console.log(typeof i);//number
+
+        i="abc";
+        console.log(i);//abc
+        console.log(typeof i);//string
+
+        i=null;
+        console.log(i);//null
+        console.log(typeof i);//object
+        //给i赋值一个对象（妞）
+
+        i= new Object();
+        console.log(i);//{}
+        console.log(typeof i);//object
+
+    </script>
+
+</body>
+</html>

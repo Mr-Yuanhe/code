@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+
+
+        /*交集选择器（选择器靠着选择器,正常情况下，都是标签选择器与其他选择器交，且标签选择器放在最前面）*/
+        p.c1{
+            color: red;
+            background: #ccc;
+        }
+
+        /*并集选择器（,）*/
+
+        h2,p,.c2{
+            border: 3px solid red;
+        }
+    </style>
+
+</head>
+<body>
+
+
+        <h2>静夜思</h2>
+        <h2 class="c1">唐·李白</h2>
+        <p class="c1">床前明月光，</p>
+        <p>疑是地上霜。</p>
+        <p>举头望明月，</p>
+        <p>低头思故乡。</p>
+
+        <div class="c2">
+            我是div
+        </div>
+
+</body>
+</html>

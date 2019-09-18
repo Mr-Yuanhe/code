@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    
+    function fn1() {
+        console.log("我是正常的函数！");
+    }
+    fn1();
+
+    /*匿名函数*/
+    var fn2 = function () {
+        console.log("我是匿名函数");
+    }
+    fn2();
+
+    /*自调函数*/
+    (function () {
+        console.log("我是自调函数1");
+    }());
+
+
+    /*回调函数*/
+    window.setTimeout(function () {
+        console.log("2秒后，执行该回调函数！")
+    },2000);
+
+
+
+
+</script>
+    
+
+</body>
+</html>

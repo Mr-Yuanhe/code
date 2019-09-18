@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+
+    var str = "520.1314";
+    /*Number();转number类型*/
+    var result = Number(str);
+    console.log(result);
+
+    /*parseInt();转number的整数类型，并且可以去掉字符串中数字后面的字母*/
+    var result02 = parseInt(str);
+    console.log(result02);//520
+    var s = "5201314xxx";
+    var result03 = parseInt(s);
+    console.log(result03);//520
+
+    /*parseFloat();转number的小数类型，并且可以去掉字符串中数字后面的字母*/
+
+    /*isNaN();is not a number,判断是否是一个数字，不是一个数字返回true,是一个数字返回false*/
+
+    var bool = isNaN(123);
+    console.log(bool);//false
+
+</script>
+
+</body>
+</html>
+
+<!--
+
+
+
+
+
+
+-->

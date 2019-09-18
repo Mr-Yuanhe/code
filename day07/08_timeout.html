@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<style>
+    #p1{
+        height: 40px;
+        line-height: 40px;
+        background-color: yellowgreen;
+        font-size: 30px;
+    }
+
+</style>
+
+</head>
+<body>
+
+<button onclick="fn1()">设置超时</button>
+<button>取消超时</button>
+<p>点击"设置超时"按钮，5秒后显示最新的时间</p>
+
+<p id="p1"></p>
+
+<script>
+    function fn1() {
+        //超时操作
+        window.setTimeout(function(){
+            //5秒后。往页面上的p元素写入最新的时间
+            //1、获取最新的时间
+            var now = new Date();
+            //2、获取页面上的p元素<p id="p1"></p>
+            var pNode = document.getElementById("p1");
+            //3、把最新的时间写到p元素上
+            pNode.textContent = now;
+        },5000);
+    }
+</script>
+
+</body>
+</html>

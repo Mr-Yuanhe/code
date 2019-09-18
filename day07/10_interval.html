@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #p1 {
+            height: 40px;
+            line-height: 40px;
+            background-color: yellowgreen;
+            font-size: 30px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<button onclick="fn1()">设置间隔</button>
+<button onclick="fn2()">取消间隔</button>
+<p>点击"设置间隔"按钮，显示实时时间</p>
+
+<p id="p1"></p>
+
+<script>
+
+    var b;
+
+    function fn1() {
+        /*不声明直接赋值的变量，即为全局变量*/
+         b = setInterval(function () {
+            //1、获取最新的时间
+            var now = new Date();
+            //2、获取页面上的p元素<p id="p1"></p>
+            var pNode = document.getElementById("p1");
+            //3、把最新的时间写到p元素上
+            pNode.textContent = now;
+        }, 1000);
+    }
+
+
+    function fn2() {
+        window.clearInterval(b);
+    }
+</script>
+
+</body>
+</html>

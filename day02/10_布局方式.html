@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        label{
+            display: inline-block;
+            width: 48px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>div布局</h1>
+    <form action="success.html" method="get">
+        <div>
+            <label>用户名</label>
+            <input type="text" name="username">
+        </div>
+        <div>
+            <label>密码</label>
+            <input type="password" name="pwd">
+        </div>
+        <div>
+            <input type="submit" value="登录">
+        </div>
+    </form>
+    <hr>
+    <h1>table布局</h1>
+    <form action="success.html" method="get">
+        <table>
+            <tr>
+                <td><label>用户名</label></td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td><label>密码</label></td>
+                <td><input type="password" name="pwd"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="登录"></td>
+            </tr>
+        </table>
+    </form>
+
+
+</body>
+</html>

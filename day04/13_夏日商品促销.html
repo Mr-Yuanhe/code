@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        #box{
+            width: 426px;
+            /*border: 2px solid #ccc;*/
+            margin: 50px auto;
+            position: relative;
+        }
+        /*如果一个div中只存在一张图片，该图片是不能够把div100%占满，需要把图片设置成display:block*/
+        #box>img{
+            display: block;
+        }
+
+        #box>ul{
+            list-style: none;
+            /*清除浮动*/
+            overflow: hidden;
+            /*子绝父相*/
+            position: absolute;
+            top:95px;
+            left: 205px;
+        }
+
+        #box>ul>li{
+            float: left;
+            border: 1px solid #000;
+            margin: 0px 8px;
+            padding: 0px 8px;
+            background-color: #fff;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="box">
+        <img src="img/adver-01.jpg" alt="">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+
+</body>
+</html>

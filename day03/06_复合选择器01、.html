@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*后代选择器（空格）*/
+        #box p{
+            color: red;
+        }
+
+
+        /*直接子代选择器、亲儿子（>）*/
+        #box>p{
+            background: #ccc;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+    <div id="box">
+        <h2>静夜思</h2>
+        <p>床前明月光，</p>
+        <p>疑是地上霜。</p>
+        <div>
+            <p>举头望明月，</p>
+            <p>低头思故乡。</p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input:focus{
+            background-color:orange;
+        }
+
+        input:disabled{
+            background-color: #555;
+        }
+        input[type="checkbox"]:checked{
+            width: 20px;
+            height: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<form action="">
+    <div>
+        <!--for属性是为了在页面上点击用户的时候光标自动锁定到对应的空间中-->
+        <label for="username">用户名</label>
+        <input type="text" name="username" id="username">
+    </div>
+    <div>
+        <label for="password">密码</label>
+        <input type="password" name="password" id="password" disabled>
+    </div>
+    <div>
+        <label>爱好</label>
+        <input type="checkbox" name="hobby" value="eat"> 吃
+        <input type="checkbox" name="hobby" value="drink"> 喝
+        <input type="checkbox" name="hobby" value="sleep"> 睡
+    </div>
+</form>
+
+</body>
+</html>

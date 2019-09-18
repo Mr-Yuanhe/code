@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        div {
+            height: 200px;
+            width: 500px;
+            border: 3px solid #ccc;
+        }
+
+        #d1 {
+            /*简写背景色写法*/
+            /*background: yellowgreen;*/
+            /*标准背景色写法*/
+            background-color: deepskyblue;
+        }
+
+        #d2{
+            font-size: 80px;
+            /*设置背景图片*/
+            background-image: url("./img/bg.gif");
+            /*背景图片不重复*/
+            background-repeat: no-repeat;
+            /*设置背景图片的位置:距离左边50px(向右),距离上边100px(向下移)*/
+            background-position: 50px 100px;
+        }
+        #d3{
+            font-size: 80px;
+            /*背景图片的简写*/
+            background: url("./img/bg.gif") no-repeat 50px 100px;
+        }
+
+        #d4{
+            font-size: 80px;
+            /*背景图片的简写*/
+            background: url("./img/bg.gif") no-repeat 0px 0px;
+            /*设置背景图片的大小*/
+            background-size: 100% 100%;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="d1"></div>
+<div id="d2">设置背景图片</div>
+<div id="d3">设置背景图片</div>
+<div id="d4">设置背景图片</div>
+
+</body>
+</html>

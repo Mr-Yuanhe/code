@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        #box{
+            width: 250px;
+            border: 1px dashed #ccc;
+            margin: 20px auto;
+        }
+        #box>h3{
+            height: 40px;
+            background-color: #E9185A;
+            color: #fff;
+            line-height: 40px;
+            font-weight: 600;
+            font-family: "宋体";
+            padding-left: 18px;
+        }
+        #box>ul{
+            list-style: none;
+        }
+        #box>ul>li{
+            border-bottom: 1px dashed #ccc;
+            line-height: 28px;
+        }
+        #box>ul>li>a{
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        #box>ul>li>a>strong{
+            padding: 0px 6px;
+            background: url("img/dot_01.gif") no-repeat -3px -2px;
+            color: #fff;
+        }
+       #box img{
+            display: none;
+        }
+        #box>ul>li:hover>a>strong{
+            background: url("img/dot_02.gif") no-repeat -3px -2px;
+        }
+        #box>ul>li:hover>a>span{
+            color: #E9185A;
+        }
+        #box>ul>li:hover img{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h3>大家都喜欢的彩妆</h3>
+        <ul>
+            <li>
+                <a href="#">
+                    <strong>1</strong>
+                    <span>Za极芮新能真皙美白隔离箱35g</span>
+                    <img src="img/icon-1.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <strong>2</strong>
+                    <span>宝莲精纯矿物奇妙新颜乳霜BB霜30ml</span>
+                    <img src="img/icon-2.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <strong>3</strong>
+                    <span>Za极芮新能真皙美白隔离箱35g</span>
+                    <img src="img/icon-3.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <strong>4</strong>
+                    <span>Za极芮新能真皙美白隔离箱35g</span>
+                    <img src="img/icon-4.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

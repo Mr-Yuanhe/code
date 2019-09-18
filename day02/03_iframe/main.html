@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #header{
+            height: 120px;
+            text-align: center;
+            line-height: 120px;
+            font-size: 70px;
+            background: yellowgreen;
+        }
+
+        #nav{
+            background: deepskyblue;
+            height: 700px;
+            width: 200px;
+            line-height: 40px;
+            text-align: center;
+            float: left;
+        }
+
+        #content{
+            margin-left: 200px;
+            height: 700px;
+            background: pink;
+        }
+        #footer{
+            background: purple;
+            height: 50px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div>
+        <div id="header">某某某企业欢迎大佬光临~</div>
+        <div id="nav">
+            <ul type="none">
+                <li><a href="./info.html" target="myFrame">公司简介</a></li>
+                <li><a href="./course.html" target="myFrame">课程介绍</a></li>
+                <li><a href="#">就业喜报</a></li>
+                <li><a href="./company.html" target="myFrame">合作企业</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <iframe name="myFrame" src="./info.html" width="100%" height="100%" frameborder="0" ></iframe>
+        </div>
+        <div id="footer"></div>
+    </div>
+
+</body>
+</html>

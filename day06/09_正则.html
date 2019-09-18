@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    /*起变量名的时候，见名识意*/
+    var phoneRegExp = /^1(3|5|7|8|9)\d{9}$/;
+
+    /*手机号码不是数字，是string类型*/
+    console.log(phoneRegExp.test("13913007563"));//true
+    console.log(phoneRegExp.test("139130075631"));//false
+    console.log(phoneRegExp.test("12913007563"));//false
+    console.log(phoneRegExp.test("1391300756"));//false
+
+    var str = "abc123abc123ABc123";
+    /*match() 找到一个或多个正则表达式的匹配。 */
+    var result01 = str.match(/abc/gi);
+    console.log(result01);
+
+
+    /*replace() 替换与正则表达式匹配的子串。 */
+    var result02 = str.replace(/abc/gi,"qwer");
+    console.log(result02);
+
+    /*search() 检索与正则表达式相匹配的值。 匹配上返回起始索引0，不匹配返回-1*/
+    var phone = "13913007563";
+    console.log(phone.search(phoneRegExp));//0
+
+</script>
+
+</body>
+</html>
