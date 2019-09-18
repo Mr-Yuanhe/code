@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="success.html">
+    <div>
+        <label>爱好</label>
+        <input type="checkbox"  name="hobby" value="eat">吃
+        <input type="checkbox"  name="hobby" value="drink">喝
+        <input type="checkbox"  name="hobby" value="sleep">睡
+    </div>
+    <div>
+        <label>家乡</label>
+        <select name="address" multiple>
+            <option value="nj">南京</option>
+            <option value="yz">扬州</option>
+            <option value="hf">合肥</option>
+            <option value="sz">苏州</option>
+        </select>
+    </div>
+    <div>
+        <input type="button" value="在控制台输出爱好">
+        <input type="button" value="在控制台输出家乡">
+    </div>
+</form>
+
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    $(function () {
+        $("input[type='button']:eq(0)").click(function () {
+            var $checkboxChecked = $("[name='hobby']:checked");
+            console.log($checkboxChecked);
+            //定义一个数组，存放所有的爱好
+            var hobbies = [];
+            for(var i=0;i<$checkboxChecked.length;i++){
+               //var hobby =  $checkboxChecked[i].value;
+                var hobby = $($checkboxChecked[i]).val();
+                //console.log(hobby);
+                hobbies.push(hobby);
+            }
+            console.log(hobbies.join("-"));
+            //drink
+            //eat-drink
+            //eat-drink-sleep
+        });
+
+        $("input[type='button']:eq(1)").click(function () {
+
+            //$("option:selected");
+            var address = $("select[name='address']").val();
+            console.log(address);
+            console.log(address.join("-"));
+            //yz
+            //yz-hf
+            //....
+        });
+    });
+</script>
+</body>
+</html>

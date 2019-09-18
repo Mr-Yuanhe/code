@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>你喜欢的女明星</h1>
+    <ul>
+        <li>杨幂0</li>
+        <li>杨颖1</li>
+        <li>热巴2</li>
+        <li>娜扎</li>
+        <li>赵丽颖</li>
+        <li>刘诗诗</li>
+        <li>唐嫣</li>
+    </ul>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            //odd表示基数
+            $("li:odd").css("background-color","red");
+            //even表示偶数
+            $("li:even").css("background-color","green");
+        });
+    </script>
+</body>
+</html>

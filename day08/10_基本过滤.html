@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>你最想去的城市！</h1>
+<ul>
+    <li>上海</li>
+    <li>杭州</li>
+    <li>南京</li>
+    <li>苏州</li>
+    <li>北京</li>
+    <li>东莞</li>
+</ul>
+
+<ul>
+    <li>宝应</li>
+    <li>高邮</li>
+    <li>仪征</li>
+    <li>江都</li>
+    <li>广陵</li>
+    <li>文昌</li>
+    <li>邗江</li>
+</ul>
+
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    $(function () {
+        /*在选中的所有li中过滤第一个出来*/
+        $("li:first").css("color","red");
+
+
+        $("li:eq(6)").css("background","#ccc");
+
+        $("li").eq(6).css("border","2px solid red");
+
+        $("li:gt(6)").css("font-size","40px");
+
+        $("li:lt(6)").css("font-size","40px");
+
+    });
+</script>
+
+</body>
+</html>

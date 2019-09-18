@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <label>搜索项：</label>
+        <select name="address">
+            <option value="nj">南京</option>
+            <option value="yz">扬州</option>
+            <option value="hf">合肥</option>
+            <option value="sz">苏州</option>
+        </select>
+    </div>
+
+    <input type="text" id="username" value="admin">
+
+
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    $(function () {
+        $("[name='address']").change(function () {
+            /*$(this)表示jquery当前对象*/
+            var address = $(this).val();
+            console.log(address);
+        });
+
+        $("#username").select(function (e) {
+            console.log(e);
+        });
+
+        $("#username").focus(function () {
+            $(this).css("background","orange");
+        });
+
+        $("#username").blur(function () {
+            $(this).css("background","#ccc");
+        });
+    });
+</script>
+</body>
+</html>

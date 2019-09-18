@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #box{
+            margin-top: 50px;
+        }
+
+        #box>.form{
+            text-align: center;
+            line-height: 40px;
+        }
+
+        #box>.table{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+
+        <div class="form">
+            <form action="">
+                <label>name</label>
+                <input type="text" id="name" name="name">
+                <label>email</label>
+                <input type="text" id="email" name="email">
+                <label>salary</label>
+                <input type="text" id="salary" name="salary">
+            </form>
+            <button onclick="add()">添加</button>
+        </div>
+        <hr>
+        <div class="table">
+            <table border="1" cellspacing="0" align="center">
+                <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>email</th>
+                        <th>salary</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="data">
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td><a href="#"  onclick="del(this)">Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td><a href="#" onclick="del(this)">Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td><a href="#" onclick="del(this)">Delete</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function add() {
+
+            //1、获取输入的三个值
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var salary = document.getElementById("salary").value;
+
+            //2、判断
+            if(name==null||name==""){
+                alert("名字不能为空！");
+                return;
+            }
+            if(email==null||email==""){
+                alert("email不能为空！");
+                return;
+            }
+            if(salary==null||salary==""){
+                alert("salary不能为空！");
+                return;
+            }
+
+            //3、创建dom节点，并且把值添加到对应的dom节点中
+            var trNode = document.createElement("tr");
+            var tdNode01 = document.createElement("td");
+            tdNode01.textContent=name;
+            var tdNode02 = document.createElement("td");
+            tdNode02.textContent=email;
+            var tdNode03 = document.createElement("td");
+            tdNode03.textContent=salary;
+            var tdNode04 = document.createElement("td");
+            var aNode = document.createElement("a");
+            aNode.textContent="delete";
+            aNode.setAttribute("href","#");
+            aNode.setAttribute("onclick","del(this)");
+            tdNode04.appendChild(aNode);
+            trNode.appendChild(tdNode01);
+            trNode.appendChild(tdNode02);
+            trNode.appendChild(tdNode03);
+            trNode.appendChild(tdNode04);
+            document.getElementById("data").appendChild(trNode);
+        }
+        
+        function del(obj) {
+            obj.parentNode.parentNode.remove();
+            event.preventDefault();
+        }
+    </script>
+</body>
+</html>

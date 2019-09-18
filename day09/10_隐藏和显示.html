@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<img src="./img/cxk.jpg" alt="" width="200px">
+<hr>
+<button>隐藏</button>
+<button>显示</button>
+<button>切换</button>
+<hr>
+<button>淡出</button>
+<button>淡入</button>
+<button>淡入到某种程度</button>
+
+
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    $(function () {
+        $("button:eq(0)").click(function () {
+            //$("img").css("display","none");
+            $("img").hide(5000);
+        });
+        $("button:eq(1)").click(function () {
+            $("img").show(3000);
+        });
+        $("button:eq(2)").click(function () {
+            $("img").toggle(3000);
+        });
+
+
+        $("button:eq(3)").click(function () {
+            $("img").fadeOut(3000);
+        });
+        $("button:eq(4)").click(function () {
+            $("img").fadeIn(3000);
+        });
+        $("button:eq(5)").click(function () {
+            $("img").fadeTo(3000,0.5,function () {
+                alert("效果完成！");
+
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

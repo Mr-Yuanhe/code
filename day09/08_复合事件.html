@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li{
+            border: 2px solid #ccc;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>aaa</li>
+        <li>bbb</li>
+        <li>ccc</li>
+        <li>ddd</li>
+        <li>yyy</li>
+        <li>zzz</li>
+    </ul>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            /*给每一个li添加一个mouseover事件*/
+//           $("li").mouseover(function () {
+//               /*$(this)表示当前对象*/
+//               $(this).css("background","orange");
+//           });
+//
+//            $("li").mouseout(function () {
+//                /*$(this)表示当前对象*/
+//                $(this).css("background","");
+//            });
+
+            /*复合事件hover(fn1,fn2)*/
+            $("li").hover(function () {
+                $(this).css("background","pink");
+            },function () {
+                $(this).css("background","");
+            });
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            height: 100px;
+            width: 100px;
+            background-color: yellowgreen;
+            position: relative;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <button>动次打次</button>
+    <div id="box">
+    
+    </div>
+
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            $("button:eq(0)").click(function () {
+                /*$(selector).animate(styles,speed,easing,callback)*/
+                //$("#box").animate({height:"300px",width:"300px"},3000);
+                $("#box").animate({left:"+=300px",top:"+=100px"},3000);
+            });
+        });
+    </script>
+
+</body>
+</html>

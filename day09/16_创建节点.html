@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .error{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>你看过的动画片</h1>
+
+    <ul>
+        <li>喜洋洋与灰太狼</li>
+        <li>葫芦娃</li>
+        <li>机器猫</li>
+        <li>海尔兄弟</li>
+        <!--<li title="dntg">大闹天宫</li>-->
+    </ul>
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+
+            $("ul").append("<li class='error'>海尔兄弟1234</li>");
+
+            //创建jquery对象
+            var $li = $("<li>",{
+                text:"大闹天宫",
+                title:"dntg",
+                class:"error"
+            });
+            console.log($li);
+            /*在元素的末尾添加一个子元素*/
+            //$("ul").append($li);
+
+            /*把目标对象添加到指定元素的末尾*/
+            //$li.appendTo($("ul"));
+            $li.appendTo("ul");
+
+            $("ul").prepend("<li class='error'>天线宝宝</li>");
+
+        });
+    </script>
+
+
+
+</body>
+</html>

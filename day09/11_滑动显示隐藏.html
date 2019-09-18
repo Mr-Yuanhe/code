@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            height: 500px;
+            width: 300px;
+            background-color: yellowgreen;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<button>滑动隐藏</button>
+<button>滑动显示</button>
+<button>滑动切换</button>
+<div id="box">
+
+</div>
+
+
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    $(function () {
+        $("button:eq(0)").click(function () {
+            $("#box").slideUp(3000);
+        });
+        $("button:eq(1)").click(function () {
+            $("#box").slideDown(3000);
+        });
+        $("button:eq(2)").click(function () {
+            $("#box").slideToggle(3000);
+        });
+    });
+</script>
+
+</body>
+</html>

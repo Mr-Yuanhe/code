@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h2>举例国庆节阅兵倒计时：</h2>
+    <h3 id="time"></h3>
+    <script>
+        /*计算当前时间距离目标时间的毫秒差，并且把毫秒差转为天时分秒*/
+        var  targetTime = new Date("2019-10-01 8:00:00");
+        var targetNum = targetTime.getTime();
+        window.setInterval(function () {
+            var now = new Date();
+            var nowNum = now.getTime();
+            //获取毫秒差
+            var minusNum = targetNum - nowNum;
+            console.log(minusNum);//
+            var days = parseInt(minusNum/(24*3600*1000));
+            var hours = parseInt(minusNum%(24*3600*1000) / (3600*1000));
+            var minutes = parseInt(minusNum%(3600*1000) /(60*1000) );
+            var seconds = parseInt(minusNum%(60*1000) /1000 );
+            document.getElementById("time").textContent=days+"天"+hours+"时"+minutes+"分"+seconds+"秒";
+        },1000);
+    </script>
+
+</body>
+</html>

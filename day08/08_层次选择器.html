@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    
+    <h1>你最想去的城市！</h1>
+    <ul>
+        <li>上海</li>
+        <li>杭州</li>
+        <li id="nj">南京</li>
+        <li>苏州</li>
+        <li>北京</li>
+        <li>东莞</li>
+    </ul>
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+       $(function () {
+           /*下面所有兄弟（~）*/
+           $("#nj~li").css("border","2px solid red");
+
+           /*next(selector);下一个*/
+           $("#nj").next("li").css("color","orange");
+
+           /*prevAll(selector);上面所有*/
+           $("#nj").prevAll().css("background","#ccc");
+
+           /*siblings(selector);兄弟姐妹*/
+           $("#nj").siblings().css("font-size","40px");
+       });
+    </script>
+
+</body>
+</html>

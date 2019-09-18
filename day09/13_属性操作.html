@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<img alt="蔡徐坤" width="200px">
+<hr>
+<button>attr设置属性值</button>
+<button>attr取src属性值</button>
+<button>移除src属性</button>
+<hr>
+<button>prop设置属性值</button>
+<button>prop取属性值</button>
+
+
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    $(function () {
+        $("button:eq(0)").click(function () {
+            //src="./img/cxk.jpg"
+            $("img").attr("src","./img/cxk.jpg");
+
+        });
+        $("button:eq(1)").click(function () {
+            var url = $("img").attr("src");
+            alert(url);
+        });
+        $("button:eq(2)").click(function () {
+            $("img").removeAttr("src");
+        });
+
+        $("button:eq(3)").click(function () {
+            $("img").prop("src","./img/cxk.jpg");
+        });
+        $("button:eq(4)").click(function () {
+            var url = $("img").prop("src");
+            alert(url);
+        });
+    });
+</script>
+
+</body>
+</html>

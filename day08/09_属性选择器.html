@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="success.html">
+        <div>
+            <label>用户名</label>
+            <input type="text"  name="username">
+        </div>
+        <div>
+            <label>密码</label>
+            <input type="password"  name="password">
+        </div>
+        <div>
+            <!--由于submit会自动提交表单,button类型不会提交-->
+            <input type="button" value="登录">
+        </div>
+    </form>
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            /*给jquery对象添加点击事件，点击页面上的元素，就会执行click方法中的回调函数*/
+            $("input[type='button']").click(function () {
+                //val() 设置或返回匹配元素的value值。
+                var username = $("input[name='username']").val();
+                var password = $("input[name='password']").val();
+                alert(username+";"+password);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--<input type="checkbox" checked="checked">-->
+
+<input type="checkbox" name="hobby">
+
+<hr>
+<button>attr设置选中</button>
+<button>attr获取选中的值</button>
+<hr>
+<button>prop设置选中</button>
+<button>prop获取选中的值</button>
+
+
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    $(function () {
+
+        $("button:eq(0)").click(function () {
+            $("[name='hobby']").attr("checked","checked");
+
+        });
+        $("button:eq(1)").click(function () {
+            var value =  $("[name='hobby']").attr("checked");
+            alert(value);
+        });
+
+
+        $("button:eq(2)").click(function () {
+            $("[name='hobby']").prop("checked",true);
+        });
+        $("button:eq(3)").click(function () {
+            var value =  $("[name='hobby']").prop("checked");
+            alert(value);
+        });
+
+    });
+</script>
+
+</body>
+</html>

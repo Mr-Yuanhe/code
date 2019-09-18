@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .error{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+<h1>你看过的动画片</h1>
+
+<ul>
+    <li>喜洋洋与灰太狼</li>
+    <li id="item">葫芦娃</li>
+    <li>机器猫</li>
+    <li>海尔兄弟</li>
+</ul>
+
+<hr>
+
+<button>remove</button>
+<button>detach</button>
+<button>empty</button>
+<button>remove</button>
+
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    $(function () {
+
+        $("button:eq(0)").click(function () {
+            var $li = $("#item").remove();
+            $("ul").append($li);
+
+        });
+
+        $("button:eq(1)").click(function () {
+            var $li = $("#item").detach();
+            $("ul").append($li);
+        });
+
+        $("#item").click(function () {
+            alert("1234");
+        });
+
+
+        $("button:eq(2)").click(function () {
+            $("ul").empty();
+        });
+
+        $("button:eq(3)").click(function () {
+            $("ul").remove();
+        });
+
+
+    });
+</script>
+
+
+
+</body>
+</html>

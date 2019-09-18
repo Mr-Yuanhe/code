@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>你喜欢吃的东西</h1>
+<ul>
+    <li id="pork">猪肉</li>
+    <li class="fruit">苹果</li>
+    <li class="fruit">榴莲</li>
+    <li class="fruit">香蕉</li>
+</ul>
+
+<p class="fruit">猕猴桃</p>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+
+    $(function () {
+
+        /*标签选择器*/
+        /**
+         * $("li")表示选中页面上所有的li，并且变为jquery对象
+         * css(样式名，样式值)，给jquery对象添加样式
+         * */
+        $("li").css("border","2px solid red");
+
+        /*id选择器*/
+        $("#pork").css("font-size","40px");
+
+
+        /*交集选择器*/
+        $("li.fruit").css("background-color","#ccc");
+
+    });
+
+
+</script>
+
+
+</body>
+</html>

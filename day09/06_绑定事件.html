@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+
+</head>
+<body>
+    <button>dblclick</button>
+    <button>bind</button>
+    <button>on</button>
+    <button>unbind</button>
+    <button>off</button>
+    <button>one</button>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            $("button:eq(0)").dblclick(function () {
+                alert("双击666");
+            });
+
+            /*bind(事件类型，callback)*/
+            $("button:eq(1)").bind("click",function () {
+                alert("绑定一个点击事件");
+            });
+            $("button:eq(2)").on("click",function () {
+                alert("用on绑定一个点击事件");
+            });
+
+            /*unbind(事件类型)是解除事件的方法，如果带参数，就解指定事件，不带参数，解除所有事件*/
+            $("button:eq(3)").click(function () {
+                $("button").unbind();
+            });
+
+            /*one(),绑定一次事件*/
+            $("button:eq(5)").one("click",function () {
+                alert("用one绑定一个点击事件");
+            });
+
+        });
+    </script>
+
+
+</body>
+</html>

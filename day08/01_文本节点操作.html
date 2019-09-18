@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="box">
+        <h1>我是标题</h1>
+    </div>
+
+
+
+    <button onclick="fn1()">获取值</button>
+    <button onclick="fn2()">textContent设置值</button>
+    <button onclick="fn3()">innerHTML设置值</button>
+
+    <div id="box2">
+
+    </div>
+    <script>
+        
+        function fn1() {
+            var divNode = document.getElementById("box");
+            /*返回节点及其后代的"文本内容"。*/
+            console.log(divNode.textContent);
+            /*返回元素的html内容*/
+            console.log(divNode.innerHTML);
+
+        }
+        
+        function fn2() {
+            var divNode = document.getElementById("box2");
+            /*直接以文本的形式在元素节点中显示文本值*/
+            divNode.textContent="<h1>我是标题</h1>";
+        }
+
+        function fn3() {
+            var divNode = document.getElementById("box2");
+            /*在元素节点中显示内容的时候，会渲染标签*/
+            divNode.innerHTML="<h1>我是标题</h1>";
+        }
+    </script>
+
+</body>
+</html>

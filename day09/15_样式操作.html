@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .c1{
+            border:5px solid red;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+<img src="./img/cxk.jpg" class="c2 c3 c4" width="200px">
+<hr>
+<button>css方法添加样式</button>
+<button>addClass方法添加样式类</button>
+<button>判断是否有样式c1</button>
+
+
+
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    $(function () {
+        $("button:eq(0)").click(function () {
+            /*边框，边框圆角，透明度0.5*/
+            $("img").css("border","3px solid yellowgreen");
+            $("img").css("border-radius","50%");
+            $("img").css("opacity","0.5");
+        });
+        $("button:eq(1)").click(function () {
+            $("img").addClass("c1");
+        });
+
+        $("button:eq(2)").click(function () {
+            var b = $("img").hasClass("c1");
+            alert(b);
+        });
+    });
+</script>
+
+</body>
+</html>
