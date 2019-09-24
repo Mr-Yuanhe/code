@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>最喜欢的明星</h1>
+    <ul>
+        <li>杨幂</li>
+        <li id="item">热巴</li>
+        <li>唐嫣</li>
+        <li>宋小宝</li>
+    </ul>
+    <button>parent()</button>
+    <button>parents()</button>
+    <button>children()</button>
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            $("button:eq(0)").click(function () {
+                console.log($("#item").parent());
+            });
+
+            $("button:eq(1)").click(function () {
+                console.log($("#item").parents());
+            });
+
+            $("button:eq(2)").click(function () {
+                console.log($("ul").children());
+            });
+            
+        });
+
+    </script>
+
+</body>
+</html>

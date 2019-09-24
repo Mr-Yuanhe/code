@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        label{
+            display: inline-block;
+            width: 65px;
+        }
+        .error{
+            display: inline;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<form action="success.html" id="registerForm">
+    <div>
+        <label>用户名</label>
+        <input type="text"  name="username" required maxlength="12" minlength="6">
+    </div>
+    <div>
+        <label>密码</label>
+        <input type="password"  name="password" required id="password">
+    </div>
+    <div>
+        <label>确认密码</label>
+        <input type="password"  name="rePassword" equalTo="#password">
+    </div>
+
+    <div>
+        <label>爱好</label>
+        <input type="checkbox"  name="hobby" value="eat">吃
+        <input type="checkbox"  name="hobby" value="drink">喝
+        <input type="checkbox"  name="hobby" value="sleep">睡
+    </div>
+    <div>
+        <label>手机号码</label>
+        <input type="text"  name="phone" >
+    </div>
+    <div>
+        <input type="submit" value="注册">
+    </div>
+</form>
+
+<script src="js/jquery-3.4.1.js"></script>
+<!--validate的核心js文件-->
+<script src="js/jquery.validate.js"></script>
+<!--汉化的js文件-->
+<script src="js/messages_zh.js"></script>
+
+<script>
+    $(function () {
+        $("#registerForm").validate();
+    });
+
+</script>
+
+</body>
+</html>

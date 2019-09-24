@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/zTreeStyle.css">
+</head>
+<body>
+
+    <div>
+        <ul class="ztree" id="tree">
+
+        </ul>
+    </div>
+
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/jquery.ztree.all.js"></script>
+
+<script>
+    $(function () {
+
+        //1、zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+        var setting = {};
+
+
+        //2、定义ztree中需要的数据
+        var data = [
+            {
+                name:"父节点1",
+                children:[
+                    {name:"父节点11"},
+                    {
+                        name:"父节点12",
+                        //是否是父节点
+                        isParent:true
+                    },
+                    {name:"父节点13"}
+                ]
+            },
+            {
+                name:"父节点2",
+                children:[
+                    {name:"父节点21"},
+                    {name:"父节点22"},
+                    {name:"父节点23"}
+                ],
+                open:true
+            },
+            {
+                name:"父节点3",
+                children:[
+                    {name:"父节点31"},
+                    {name:"父节点32"},
+                ]
+            }
+        ];
+
+        //3、核心的方法 init: function (obj, zSetting, zNodeDatas)
+        $.fn.zTree.init($("#tree"),setting,data);
+
+    });
+    
+    
+</script>
+</body>
+</html>

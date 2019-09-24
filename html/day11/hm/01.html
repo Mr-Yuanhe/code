@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #banner{
+            width: 550px;
+            height: 450px;
+            border: 2px solid red;
+            margin: 50px auto;
+            position: relative;
+
+        }
+        #banner>ul{
+            list-style: none;
+        }
+
+        #banner>ul>li{
+            display: none;
+        }
+        #banner>ul>li.active{
+            display: block;
+        }
+
+        #banner img{
+            height: 450px;
+            width: 550px;
+        }
+
+        #banner i{
+            margin: 0px 5px;
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color: #555;
+        }
+        #banner i.active{
+            background-color: #fff;
+        }
+        #banner>div{
+            position: absolute;
+            bottom: 20px;
+            left: 50px;
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="banner">
+        <ul>
+           <!-- <li class="active"><img src="image/1489455784435.png" alt=""></li>
+            <li ><img src="image/1489455799290.png" alt=""></li>
+            <li><img src="image/1489717008053.png" alt=""></li>-->
+        </ul>
+        <div>
+            <!--<i class="active"></i>
+            <i></i>
+            <i></i>-->
+        </div>
+    </div>
+
+<script src="../js/jquery-3.4.1.js"></script>
+<script>
+    $(function () {
+        //ajax
+        var bannerData = [
+            {
+                "id": 1001,
+                "src": "image/1489455784435.png",
+                "buttonName": "图片1"
+            },
+            {
+                "id": 1002,
+                "src": "image/1489455799290.png",
+                "buttonName": "图片2"
+            },
+            {
+                "id": 1003,
+                "src": "image/1489717008053.png",
+                "buttonName": "图片3"
+            },
+            {
+                "id": 1004,
+                "src": "image/zbz.jpg",
+                "buttonName": "图片4"
+            } ,
+            {
+                "id": 1009,
+                "src": "image/1489717008053.png",
+                "buttonName": "图片5"
+            }
+        ];
+
+        for(var i=0;i<bannerData.length;i++ ){
+
+            var $li;
+            var $i;
+            if(i==0){
+                 $li = $("<li>",{
+                     class:"active",
+
+                     //添加一个扩展属性，把id绑定进去
+                     "data-id":bannerData[i].id
+                });
+                 $i = $("<i>",{
+                     class:"active",
+                     "data-id":bannerData[i].id
+                 });
+
+            }else{
+                $li = $("<li>",{
+                    "data-id":bannerData[i].id
+                });
+                $i = $("<i>",{
+                    "data-id":bannerData[i].id
+                });
+            }
+
+            var $img = $("<img>",{
+                src:bannerData[i].src
+            });
+
+            //整合节点
+            $li.append($img);
+            $("#banner>ul").append($li);
+
+            $("#banner>div").append($i);
+        }
+
+        $("#banner i").mouseover(function () {
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
+
+            //获取i中的data-id
+            var dataId = $(this).attr("data-id");
+            $("#banner>ul").children("li[data-id="+dataId+"]").addClass("active");
+            $("#banner>ul").children("li[data-id="+dataId+"]").siblings().removeClass("active");
+        });
+    });
+
+</script>
+</body>
+</html>

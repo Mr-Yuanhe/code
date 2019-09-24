@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+    <button>主要按钮</button>
+    <hr>
+    <button class="btn">按钮</button>
+    <hr>
+    <button class="btn btn-primary">主要按钮</button>
+    <button class="btn btn-primary active">激活的主要按钮</button>
+    <hr>
+    <button class="btn btn-success">成功按钮</button>
+    <hr>
+    <button class="btn btn-danger">危险按钮</button>
+    <hr>
+    <button class="btn btn-link">链接按钮</button>
+    <hr>
+    <a href="#" class="btn btn-primary">按钮链接</a>
+    <hr>
+    <input type="submit" class="btn btn-primary btn-lg" value="提交按钮">
+    <hr>
+    <input type="button" class="btn btn-primary btn-xs" value="普通按钮">
+    <hr>
+    <button class="btn btn-primary disabled" onclick="fn1()">样式禁用按钮</button>
+    <button class="btn btn-primary" disabled="disabled" onclick="fn1()">属性禁用按钮</button>
+    <!--属性决定功能，样式徒有其表-->
+    <hr>
+
+    <!--关闭按钮-->
+    <button type="button" class="close"><span>&times;</span></button>
+    <span class="caret"></span>
+
+</div>
+
+<script src="js/jquery-3.4.1.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script>
+    function fn1(){
+        alert("禁用按钮测试！");
+    }
+</script>
+</body>
+</html>
