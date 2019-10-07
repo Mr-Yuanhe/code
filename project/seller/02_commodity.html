@@ -52,7 +52,7 @@
                     <a href="01_personal.html">个人中心</a>
                 </li>
                 <li>
-                    <a href="02_commodity.html" style="color: red">商品管理</a>
+                    <a href="02_commodity_old.html" style="color: red">商品管理</a>
                 </li>
                 <li>
                     <a href="03_publish.html">发布商品</a>
@@ -132,26 +132,26 @@
                         <th>操作</th>
                     </tr>
 
-                    <!--<tr>-->
-                        <!--<td>-->
-                            <!--<img src="img/1496210830044.jpg">-->
-                            <!--<div>-->
-                                <!--<span>小米手机p9</span>-->
-                                <!--<span>红色，16g</span>-->
-                                <!--<span>爆款手机</span>-->
-                            <!--</div>-->
-                        <!--</td>-->
-                        <!--<td>￥999.00</td>-->
-                        <!--<td><span>500</span></td>-->
-                        <!--<td>10</td>-->
-                        <!--<td>2018-10-12</td>-->
-                        <!--<td>-->
-                            <!--<button>下架</button>-->
-                            <!--<button>复制</button>-->
-                        <!--</td>-->
-                    <!--</tr>-->
 
-
+                    <tr v-for="product in info">
+                        <td>
+                            <!--给img的src绑定图片链接-->
+                            <img v-bind:src="product.img" alt="">
+                            <div>
+                                <span>{{product.name}}</span>
+                                <span>{{product.property}}</span>
+                                <span>{{product.info}}</span>
+                            </div>
+                        </td>
+                        <td>{{ product.price }}</td>
+                        <td>{{ product.num }}</td>
+                        <td>{{ product.sales }}</td>
+                        <td>{{ product.time }}</td>
+                        <td>
+                            <button>下架</button>
+                            <button>复制</button>
+                        </td>
+                    </tr>
                 </table>
                 <nav aria-label="Page navigation">
                     <ul class="pagination">
@@ -217,87 +217,28 @@
         </div>
     </div>
 </div>
-    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-    <script src="../js/jquery-3.4.1.min.js"></script>
-    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <script>
-
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-
-
-            $.ajax({
-                type: "get",
-                url: "json/02_commodity.json",
-                async: true,
-                success: function (data) {
-                    for (var i = 0; i < data.length; i++) {
-                        var $tr = $("<tr>");
-                        var $td1 = $("<td>");
-                        var $img = $("<img>",{
-                            src:data[i].img
-                        });
-                        var $div = $("<div>");
-
-                        var $span1 = $("<span>",{
-                            text:data[i].name
-                        });
-                        var $span2 = $("<span>",{
-                            text:data[i].property
-                        });
-                        var $span3 = $("<span>",{
-                            text:data[i].info
-                        });
-                        $div.append($span1).append($span2).append($span3);
-                        $td1.append($img).append($div);
-                        var $td2 = $("<td>",{
-                            text:"￥"+data[i].price
-                        });
-                        var $td3 = $("<td>");
-                        var $span = $("<span>",{
-                            text:data[i].num
-                        });
-                        $td3.append($span);
-                        var $td4 = $("<td>",{
-                            text:data[i].sales
-                        });
-                        var $td5 = $("<td>",{
-                            text:data[i].time
-                        });
-
-                        var $td6 = $("<td>");
-                        var $button1 = $("<button>",{
-                            text:"下架"
-                        });
-                        var $button2 = $("<button>",{
-                            text:"上架"
-                        });
-                        $td6.append($button1).append($button2);
-                        $tr.append($td1).append($td2).append($td3).append($td4).append($td5).append($td6);
-                        $("table > tbody").append($tr);
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="../js/jquery-3.4.1.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../vue/dist/vue.min.js"></script>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        $.ajax({
+            type: "get",
+            url: "json/02_commodity.json",
+            async: true,
+            success: function (data) {
+                new Vue({
+                    el: '.right-table',
+                    data: {
+                        info: data
                     }
-                }
-            });
+                });
+            }
         });
-        // <tr>
-        // <td>
-        // <img src="img/1496210830044.jpg">
-        //     <div>
-        //     <span>小米手机p9</span>
-        //     <span>红色，16g</span>
-        // <span>爆款手机</span>
-        // </div>
-        // </td>
-        // <td>￥999.00</td>
-        // <td><span>500</span></td>
-        // <td>10</td>
-        // <td>2018-10-12</td>
-        // <td>
-        // <button>下架</button>
-        // <button>复制</button>
-        // </td>
-        // </tr>
-    </script>
+    });
+</script>
 </body>
 </html>

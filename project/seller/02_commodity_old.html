@@ -52,10 +52,10 @@
                     <a href="01_personal.html">个人中心</a>
                 </li>
                 <li>
-                    <a href="02_commodity_old.html">商品管理</a>
+                    <a href="02_commodity_old.html" style="color: red">商品管理</a>
                 </li>
                 <li>
-                    <a href="03_publish.html" style="color: red">发布商品</a>
+                    <a href="03_publish.html">发布商品</a>
                 </li>
                 <li>
                     <a href="04_order.html">订单中心</a>
@@ -75,12 +75,53 @@
             </ul>
         </div>
         <div class="right pull-right">
-
-            <div class="right-table">
-                <div style="height: 200px;background-color: #ccc">
-                    123
-
+            <div class="right-top">
+                <ul>
+                    <li>
+                        <a href="#">全部商品</a>
+                    </li>
+                    <li>
+                        <a href="#">待上架商品</a>
+                    </li>
+                    <li>
+                        <a href="#">已上架商品</a>
+                    </li>
+                    <li>
+                        <a href="#">已下架商品</a>
+                    </li>
+                    <li>
+                        <a href="#">审批未通过商品</a>
+                    </li>
+                    <li>
+                        <a href="#">已删除商品</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-mid">
+                <div class="mid-one clearfix">
+                    <label>商品名称：</label>
+                    <input type="text"/>
                 </div>
+                <div class="mid-two clearfix">
+                    <div class="mid-two-1">
+                        <label>商品价格：</label>
+                        <input type="text"/>
+                        <div></div>
+                        <input type="text"/>
+                    </div>
+                    <div class="mid-two-2">
+                        <label>总销量：</label>
+                        <input type="text"/>
+                        <div></div>
+                        <input type="text"/>
+                    </div>
+                </div>
+                <div class="mid-three clearfix">
+                    <input type="button" value="搜索商品" class="mid-three-1"/>
+                    <input type="button" value="清空条件" class="mid-three-2"/>
+                </div>
+            </div>
+            <div class="right-table">
                 <table class="table table-bordered">
                     <tr>
                         <th>商品</th>
@@ -91,24 +132,24 @@
                         <th>操作</th>
                     </tr>
 
-                    <tr>
-                        <td>
-                            <img src="img/1496210830044.jpg">
-                            <div>
-                                <span>小米手机p9</span>
-                                <span>红色，16g</span>
-                                <span>爆款手机</span>
-                            </div>
-                        </td>
-                        <td>￥999.00</td>
-                        <td><span>500</span></td>
-                        <td>10</td>
-                        <td>2018-10-12</td>
-                        <td>
-                            <button>发布</button>
-                            <button>复制</button>
-                        </td>
-                    </tr>
+                    <!--<tr>-->
+                        <!--<td>-->
+                            <!--<img src="img/1496210830044.jpg">-->
+                            <!--<div>-->
+                                <!--<span>小米手机p9</span>-->
+                                <!--<span>红色，16g</span>-->
+                                <!--<span>爆款手机</span>-->
+                            <!--</div>-->
+                        <!--</td>-->
+                        <!--<td>￥999.00</td>-->
+                        <!--<td><span>500</span></td>-->
+                        <!--<td>10</td>-->
+                        <!--<td>2018-10-12</td>-->
+                        <!--<td>-->
+                            <!--<button>下架</button>-->
+                            <!--<button>复制</button>-->
+                        <!--</td>-->
+                    <!--</tr>-->
 
 
                 </table>
@@ -186,9 +227,77 @@
             $('[data-toggle="tooltip"]').tooltip();
 
 
+            $.ajax({
+                type: "get",
+                url: "json/02_commodity.json",
+                async: true,
+                success: function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        var $tr = $("<tr>");
+                        var $td1 = $("<td>");
+                        var $img = $("<img>",{
+                            src:data[i].img
+                        });
+                        var $div = $("<div>");
 
+                        var $span1 = $("<span>",{
+                            text:data[i].name
+                        });
+                        var $span2 = $("<span>",{
+                            text:data[i].property
+                        });
+                        var $span3 = $("<span>",{
+                            text:data[i].info
+                        });
+                        $div.append($span1).append($span2).append($span3);
+                        $td1.append($img).append($div);
+                        var $td2 = $("<td>",{
+                            text:"￥"+data[i].price
+                        });
+                        var $td3 = $("<td>");
+                        var $span = $("<span>",{
+                            text:data[i].num
+                        });
+                        $td3.append($span);
+                        var $td4 = $("<td>",{
+                            text:data[i].sales
+                        });
+                        var $td5 = $("<td>",{
+                            text:data[i].time
+                        });
+
+                        var $td6 = $("<td>");
+                        var $button1 = $("<button>",{
+                            text:"下架"
+                        });
+                        var $button2 = $("<button>",{
+                            text:"上架"
+                        });
+                        $td6.append($button1).append($button2);
+                        $tr.append($td1).append($td2).append($td3).append($td4).append($td5).append($td6);
+                        $("table > tbody").append($tr);
+                    }
+                }
+            });
         });
-
+        // <tr>
+        // <td>
+        // <img src="img/1496210830044.jpg">
+        //     <div>
+        //     <span>小米手机p9</span>
+        //     <span>红色，16g</span>
+        // <span>爆款手机</span>
+        // </div>
+        // </td>
+        // <td>￥999.00</td>
+        // <td><span>500</span></td>
+        // <td>10</td>
+        // <td>2018-10-12</td>
+        // <td>
+        // <button>下架</button>
+        // <button>复制</button>
+        // </td>
+        // </tr>
     </script>
 </body>
 </html>

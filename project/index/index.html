@@ -68,6 +68,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
 
+
     </div>
 
     <!-- 左右滑轮 -->
@@ -92,8 +93,25 @@
 
 <div class="container product-info">
 
-    <div class="row">
-        <!-- json 数据-->
+    <div class="row" id="vue">
+
+        <div class="col-md-3" v-for="product in info">
+            <img v-bind:src="product.url">
+            <div class="product-font">
+                <span>{{product.name}}</span></div>
+            <div class="show-product">
+                <button class="btn btn-info">查看详情</button>
+            </div>
+        </div>
+
+        <!--<div class="col-md-3" v-for="product in info">-->
+            <!--<img src="img/1496209504176.jpg">-->
+            <!--<div class="product-font">-->
+                <!--<span>小米手机</span></div>-->
+            <!--<div class="show-product">-->
+                <!--<button class="btn btn-info">查看详情</button>-->
+            <!--</div>-->
+        <!--</div>-->
     </div>
 
 </div>
@@ -336,10 +354,10 @@
             } else {
 
                 var option = $('#select option:selected').attr('value');
-                if (option=="seller") {
-                    $(location).attr("href","../seller/01_personal.html");
-                }else {
-                    $(location).attr("href","../session3/buyer/myOrders.html");
+                if (option == "seller") {
+                    $(location).attr("href", "../seller/01_personal.html");
+                } else {
+                    $(location).attr("href", "../session3/buyer/myOrders.html");
                 }
             }
             //错误提示消息，有错误则显示，没错误就隐藏
@@ -359,6 +377,7 @@
 <script src="../js/jquery-3.4.1.min.js"></script>
 <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../vue/dist/vue.min.js"></script>
 <script>
 
     $(function () {
@@ -392,37 +411,12 @@
                 }
 
                 //产品
-                var product = data.product;
-                for (var i = 0; i < product.length; i++) {
-                    //栅格
-                    var $div1 = $("<div>", {
-                        class: "col-md-3"
-                    });
-                    //图片
-                    var $img = $("<img>", {
-                        src: product[i].url
-                    });
-                    //手机名称
-                    var $div2 = $("<div>", {
-                        class: "product-font"
-                    });
-                    var $span = $("<span>", {
-                        text: product[i].name
-                    });
-                    //按钮
-                    var $div3 = $("<div>", {
-                        class: "show-product"
-                    });
-                    var $button = $("<button>", {
-                        class: "btn btn-info",
-                        text: "查看详情"
-                    });
-                    $div2.append($span);
-                    $div3.append($button);
-                    $div1.append($img).append($div2).append($div3);
-                    $(".container > .row").append($div1);
-
-                }
+                new Vue({
+                    el: '#vue',
+                    data: {
+                        info:data.product
+                    }
+                });
             }
         });
     });
