@@ -1,0 +1,193 @@
+#userInfo > .container > .right {
+    /*background: #ccc;*/
+}
+
+#userInfo > .container > .right > .right-top input {
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#userInfo > .container > .right > .right-top > .buttom {
+    margin-top: 140px;
+    margin-left: 60px;
+}
+
+#userInfo > .container > .right > .right-top > .buttom > .btn:last-child {
+    margin-left: 20px;
+}
+
+.btn-1 {
+    background-image: none;
+    background-color: #fff;
+    border-color: #67d272;
+    color: #67d272;
+}
+
+.btn:hover, .btn:visited, .btn:link, .btn:active {
+
+}
+
+/*中间部分*/
+
+#userInfo > .container > .right > .right-mid {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0px;
+
+}
+
+#userInfo > .container > .right > .right-mid > ul {
+    float: left;
+    margin: 15px 0px;
+    list-style: none;
+    left: 0px;
+    padding-left: 0px;
+}
+
+#userInfo > .container > .right > .right-mid > ul > li {
+    float: left;
+    margin: 0px 20px;
+    left: 0px;
+}
+
+#userInfo > .container > .right > .right-mid > ul > li > a {
+    color: #333333;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+#userInfo > .container > .right > .right-mid > ul > li > a:hover {
+    color: orange;
+}
+
+#userInfo > .container > .right > .right-mid {
+    border-left: 1px white solid;
+}
+
+/*表格部分*/
+
+.table > tbody > tr > th {
+    vertical-align: middle;
+    text-align: center;
+    border: none;
+}
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+
+#userInfo > .container > .right > .right-table {
+    margin-top: 20px;
+}
+
+#userInfo > .container > .right > .right-table > .table tr:nth-child(1) {
+    background-color: #f5f5f5;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > th:nth-child(1) {
+    width: 530px;
+
+}
+
+#userInfo > .container > .right > .right-table > .table tr > th:nth-child(2) {
+    width: 120px;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > th:nth-child(3) {
+    width: 120px;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > th:nth-child(4) {
+    width: 100px;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > th:nth-child(5) {
+    width: 100px;
+}
+
+#userInfo > .container > .right > .right-table > .table > tbody > tr > th {
+    text-align: left;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > th > span {
+    margin-left: 40px;
+    color: #393938;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > td:nth-child(1){
+    text-align: left;
+    width: 530px;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > td:nth-child(1) img {
+    width: 80px;
+    height: 80px;
+    vertical-align: top;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > td:nth-child(1) div {
+    display: inline-block;
+    color: #393938;
+    margin-left: 10px;
+
+}
+
+#userInfo > .container > .right > .right-table > .table tr > td:nth-child(1) div > span {
+    display: block;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > td:nth-child(1) div > span:nth-child(1) {
+    font-size: 20px;
+
+}
+
+#userInfo > .container > .right > .right-table > .table tr > td:nth-child(1) div > span:nth-child(2) {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+
+#userInfo > .container > .right > .right-table > .table tr > td:nth-child(2){
+    width: 140px;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > td:nth-child(3){
+    width: 120px;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > td:nth-child(4){
+    width: 100px;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > td:nth-child(5){
+    width: 100px;
+}
+
+
+
+#userInfo > .container > .right > .right-table > .table tr > td:nth-child(5) > a{
+    text-decoration: none;
+    color: blue;
+}
+#userInfo > .container > .right > .right-table > .table tr > td:nth-child(5) > a:hover{
+    text-decoration: none;
+    color: red;
+}
+
+
+
+#userInfo > .container > .right > .right-table > .table:first-child > tbody > tr > th {
+    vertical-align: middle;
+    text-align: center;
+    border: none;
+}
+
+
+
+#userInfo > .container > .right > .right-nav {
+    text-align: center;
+}
