@@ -1,0 +1,229 @@
+/*第一部分*/
+#userInfo > .container > .right > .right-top {
+    height: 64px;
+    border-bottom: 1px solid #D3D3D3;
+    margin-left: 10px;
+}
+
+#userInfo > .container > .right > .right-top > ul {
+    list-style: none;
+    overflow: hidden;
+    margin-left: -40px;
+}
+
+#userInfo > .container > .right > .right-top > ul > li {
+    float: left;
+    padding: 0px 20px;
+    margin: 20px 0px;
+}
+
+#userInfo > .container > .right > .right-top > ul > li + li {
+    border-left: 1px solid #D3D3D3;
+}
+
+#userInfo > .container > .right > .right-top > ul > li > a {
+    color: #393938;
+    font-size: 15px;
+    text-decoration: none;
+
+}
+
+#userInfo > .container > .right > .right-top > ul > li > a:link, a:visited, a:active {
+    color: #393938;
+}
+
+#userInfo > .container > .right > .right-top > ul > li > a:hover {
+    color: red;
+}
+
+/*第二部分*/
+
+#userInfo > .container > .right > .right-mid {
+    height: 200px;
+    padding: 20px 0px;
+    border-bottom: 1px solid #D3D3D3;
+}
+
+#userInfo > .container > .right > .right-mid label {
+    color: #393938;
+    font-size: 16px;
+}
+
+#userInfo > .container > .right > .right-mid input {
+    border: 1px solid #D3D3D3;
+}
+
+#userInfo > .container > .right > .right-mid > .mid-one {
+    margin-bottom: 15px;
+}
+
+#userInfo > .container > .right > .right-mid > .mid-one input {
+    width: 195px;
+    height: 35px;
+}
+
+#userInfo > .container > .right > .right-mid > .mid-two {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+#userInfo > .container > .right > .right-mid > .mid-two > .mid-two-1 {
+    float: left;
+}
+
+#userInfo > .container > .right > .right-mid > .mid-two > .mid-two-2 {
+    margin-left: 55px;
+    float: left;
+}
+
+#userInfo > .container > .right > .right-mid > .mid-two > div > div {
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background: #D3D3D3;
+    margin: 0px 13px;
+}
+
+#userInfo > .container > .right > .right-mid > .mid-two input {
+    width: 119px;
+    height: 33px;
+}
+
+#userInfo > .container > .right > .right-mid > .mid-three input {
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#userInfo > .container > .right > .right-mid > .mid-three {
+
+    overflow: hidden;
+
+}
+
+#userInfo > .container > .right > .right-mid > .mid-three > .mid-three-1 {
+    background: #FFBC52;
+    font-size: 15px;
+    color: white;
+    margin-left: 40px;
+}
+
+#userInfo > .container > .right > .right-mid > .mid-three > .mid-three-2 {
+    margin-left: 10px;
+    border-color: #67D272;
+    font-size: 15px;
+    color: #67D272;
+    background: white;
+}
+
+/*表格部分*/
+
+th, .table > tbody > tr > td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+#userInfo > .container > .right > .right-table {
+    margin-top: 20px;
+}
+
+#userInfo > .container > .right > .right-table > .table tr:first-child {
+    background-color: #f5f5f5;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > th:first-child {
+    width: 400px;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > th:nth-child(2) {
+    width: 100px;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > th:nth-child(3) {
+    width: 100px;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > th:nth-child(4) {
+    width: 80px;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > th:nth-child(5) {
+    width: 120px;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > th:nth-child(6) {
+    width: 110px;
+}
+
+/* 表格中的内容 td */
+
+#userInfo > .container > .right > .right-table > .table tr > td:first-child {
+    text-align: left;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > td:first-child img {
+    width: 110px;
+    height: 110px;
+    vertical-align: top;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > td:first-child div {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > td:first-child div > span {
+    display: block;
+
+}
+
+#userInfo > .container > .right > .right-table > .table tr > td:first-child div > span:nth-child(1) {
+    font-size: 20px;
+
+}
+
+#userInfo > .container > .right > .right-table > .table tr > td:first-child div > span:nth-child(2) {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 15px;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > td:first-child div > span:nth-child(3) {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 15px;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > td:nth-child(2) {
+    color: orange;
+}
+
+#userInfo > .container > .right > .right-table > .table tr > td:nth-child(3) span{
+    padding: 0px 15px;
+    background-color: #f5f5f5;
+}
+
+/*#userInfo > .container > .right > .right-table > .table tr > td:nth-child(4) {*/
+/*}*/
+
+/*#userInfo > .container > .right > .right-table > .table tr > td:nth-child(5) {*/
+/*}*/
+
+/*#userInfo > .container > .right > .right-table > .table tr > td:nth-child(6) {*/
+/*}*/
+
+#userInfo > .container > .right > .right-table > .table tr > td:nth-child(6) button {
+    display: block;
+    margin: 10px auto;
+    background-color: #3899f7;
+    border-radius: 5px;
+    width: 70px;
+}
+
+#userInfo > .container > .right > .right-table {
+    text-align: center;
+}
+
+
+
+
+
+

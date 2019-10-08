@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>myOrder</title>
+    <link rel="stylesheet" href="../dist/css/bootstrap.css">
+    <script type="text/javascript" src="../jquery/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="../dist/js/bootstrap.js"></script>
+    <style>
+
+        #left-1 {
+            float: left;
+
+            width: 160px;
+            padding: 0px ;
+            height: auto;
+            top: 0px;
+            overflow: hidden;
+            margin: 28px 0px 0px 15px;
+        }
+        #sec-2{
+            margin-top: 10px;
+
+            float: left;
+            width: 950px;
+            overflow: hidden;
+
+     top: 0;
+            margin: 0px 0px 0px 15px;
+
+        }
+.h2{
+    color: white;
+    margin-top: -5px;
+    border-right: solid 1px;
+    padding-right:20px ;
+}
+.h3{
+
+    color: #a3d6fc;
+    margin-top: -2px;
+}
+        #sec-1> .mayun{
+           margin: 0px 0px 3px 30px;
+        }
+#sec-1> .mayun>img{
+    border-radius:100%;
+    height: 100px;
+
+}
+.navbar-nav > li > a {
+    padding-top: 10px;
+}
+.navbar{
+    min-height: 45px;
+    margin-bottom: 0px;
+
+}
+.nav2{
+    background-color: #3899f6;
+
+    min-height: 110px;
+}
+#bs-example-navbar-collapse-2>ul>li{
+    padding: 43px 0px 0px 8px;
+}
+#sec-1>ul{
+
+    color: #666666;
+    list-style: square;
+}
+#sec-1>ul>li>a{
+    font-size: 15px;
+    color: #666666;
+    text-decoration: none;
+    font-family: "微软雅黑";
+    line-height: 30px;
+}
+#sec-1> .personal{
+    background: url("img/shutiao.png") no-repeat ;
+    color: white;
+    height: 34px;
+    width: 154px;
+    text-indent: 30px;
+    font-size: 15px;
+    line-height: 35px;
+}
+
+#d1 {
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+}
+#sec-2>.d1{
+
+    margin: 30px auto;
+}
+#sec-2>.d1>input,#sec-2>.d2>input{
+
+    height: 30px;
+}
+#sec-2>.but>button{
+    height: 30px;
+    width: 150px;
+    border-radius:5px;
+}
+#sec-2>.but>#bt1{
+    background-color: #ffbc52;
+    border-color:#ffbc52;
+    color: white;
+
+}
+#sec-2>.but>#bt2{
+    margin: 20px 0px 20px 20px ;
+    background-color: white;
+    border-color:#48c955;
+    color:#48c955;
+}
+#sec-r2>ul{
+
+    list-style:none;margin:0;
+    margin: 0px 0px 0px -40px;
+}
+#sec-r2>ul>li{
+
+    display:inline;
+    border-left:solid 1px #d1d1d1 ;
+    margin: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#sec-r2>ul>li>a {
+    text-decoration: none;
+}
+#sec-r2>ul>li>a:link {
+    color: black;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0px;
+}
+.table > thead > tr > th {
+    background-color: #f5f5f5;
+}
+.table > thead > tr > th:first-child,.table > tbody > tr > td:first-child{
+    width: 550px;
+}
+.table > thead > tr > th:nth-child(2),.table > tbody > tr > td:nth-child(2){
+    width: 90px;
+    text-align: center;
+    vertical-align: middle;
+}
+.table > thead > tr > th:nth-child(3),.table > tbody > tr > td:nth-child(3){
+    width: 90px;
+    text-align: center;
+    vertical-align: middle;
+}
+.table > thead > tr > th:nth-child(4),.table > tbody > tr > td:nth-child(4){
+    width: 90px;
+    text-align: center;
+    vertical-align: middle;
+}
+.table > thead > tr > th:nth-child(5),.table > tbody > tr > td:nth-child(5){
+    text-align: center;
+    vertical-align: middle;
+}
+.table img{
+    display: block;
+    width: 100px;
+    height: 100px;
+
+}
+.table p{
+    color: #36b0ff;
+    padding-top: 5px; ;
+}
+table>tbody>tr>td>div>.p2{
+    color: #999999;
+    font-size: 10px;
+}
+#id_footer {
+    height: 200px;
+    position:relative;
+    bottom: -25px;
+    width: 100%;
+    background-image: url("img/footer_bg.png");
+    line-height: 40px;
+}
+#id_footer>footer>p{
+    text-align: center;
+
+
+}
+    </style>
+</head>
+<body>
+<div>
+    <div class="container">
+        <nav class="navbar navbar-default"  id="d1">
+            <div >
+                <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">用户名:9527</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../../index/index.html">首页</a></li>
+                        <li><a href="#">购物车</a></li>
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <div>
+            <nav class="navbar navbar-default nav2">
+                <div class="container">
+                    <div class="navbar-collapse" id="bs-example-navbar-collapse-2">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li><h2 class="h2">中小微企业商城</h2></li>
+                            <li><h2 class="h3">个人中心</h2></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div  class="container" id="both">
+                <div  id="left-1">
+                    <div  id="sec">
+                        <div id="sec-1">
+                            <div class="mayun"><img src="img/mayun.png"/></div>
+                            <div class="personal">个人中心</div>
+                            <ul>
+                                <li>
+                                    <a href="myOrders.html">我的订单</a>
+                                </li>
+                                <li>
+                                    <a href="myProduct.html">我的商品</a>
+                                </li>
+                                <li>
+                                    <a href="shopping.html">购物车</a>
+                                </li>
+                                <li>
+                                    <a href="massage.html">信息管理</a>
+                                </li>
+                                <li>
+                                    <a href="usersName.html">用户管理</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="sec-2">
+                    <div class="d1">
+                        <lable>商品名称：</lable>
+                        <input type="text" placeholder="产品名称">
+                        <lable>订单编号：</lable>
+                        <input type="text" placeholder="订单编号">
+                    </div>
+                    <div class="d2">
+                        <lable>成交时间：</lable>
+                        <input type="text" placeholder="成交时间">
+                        <lable>-</lable>
+                        <input type="text" placeholder="结束时间">
+                    </div>
+                    <div class="but">
+                        <button class="btn" id="bt1">搜索订单</button>
+                        <button class="btn" id="bt2">清空条件</button>
+                    </div>
+                    <hr>
+                    <div id="sec-r2">
+                        <ul>
+                            <li>
+                                <a href="#">所有订单</a>
+                            </li>
+                            <li>
+                                <a href="#">待付款</a>
+                            </li>
+                            <li>
+                                <a href="#">已支付</a>
+                            </li>
+                            <li>
+                                <a href="#">交易完成</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div id="table">
+                        <table class="table table-condensed">
+                            <thead>
+                            <tr>
+                                <th>商品</th>
+                                <th>数量</th>
+                                <th>单价</th>
+                                <th>交易状态</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                        </table>
+                          <!-- <table class="table table-bordered table-condensed" >
+                               <thead>
+                                                   <tr>
+                                                       <th colspan="5">订单号：订单号1001（组）</th>
+                                                   </tr>
+                               </thead>
+                                                   <tr>
+                                                       <td class="clearfix">
+                                                           <div class="pull-left">
+                                                                   <img src="buyer/minPhone.png" />
+                                                           </div>
+                                                           <div class="pull-left">
+                                                               <p class="p1">产品名称01</p>
+                                                               <p class="p2">产品描述01</p>
+                                                           </div>
+                                                       </td>
+                                                       <td class="t2">2</td>
+                                                       <td class="t3">2000/个</td>
+                                                       <td rowspan="2" >交易完成</td>
+                                                       <td rowspan="2">
+                                                           <div>
+                                                               <button class="btn btn-warning">立即付款</button>
+                                                           </div>
+                                                           <p>
+                                                               订单详情
+                                                           </p>
+                                                       </td>
+                                                   </tr>
+                                                   <tr>
+                                                       <td class="clearfix">
+                                                           <div class="pull-left">
+                                                                   <img src="buyer/minPhone.png" />
+                                                           </div>
+                                                           <div class="pull-left">
+                                                               <p class="p1">产品名称02</p>
+                                                               <p class="p2">产品描述02</p>
+                                                           </div>
+                                                       </td>
+                                                       <td>5</td>
+                                                       <td>20/个</td>
+                                                   </tr>
+                                               </table>
+                                               <table class="table table-bordered table-condensed">
+                                                   <thead>
+                                                   <tr>
+                                                       <th colspan="5">订单号：订单号1002（组）</th>
+                                                   </tr>
+                                                   </thead>
+                                                   <tr>
+                                                       <td>
+                                                           <div class="pull-left">
+                                                                   <img src="buyer/minPhone.png" />
+                                                           </div>
+
+                                                           <div class="pull-left">
+                                                               <p class="p1">产品名称01</p>
+                                                               <p class="p2">产品描述01</p>
+                                                           </div>
+                                                       </td>
+                                                       <td>10</td>
+                                                       <td>2000/个</td>
+                                                       <td rowspan="1">交易完成</td>
+                                                       <td rowspan="1">
+                                                           <div>
+                                                               <button class="btn btn-warning">立即付款</button>
+                                                           </div>
+                                                           <p>
+                                                               订单详情
+                                                           </p>
+                                                       </td>
+                                                   </tr>
+                                               </table>-->
+                    </div>
+                    <nav aria-label="Page navigation" style="text-align: center">
+                        <ul class="pagination">
+                            <li><a href="#">最前</a></li>
+                            <li><a href="#">前一页</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">下一页</a></li>
+                            <li><a href="#">最后</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div id="id_footer">
+        <footer >
+            <p>版权所有归：</p>
+            <p>微信息产业科技有限公司</p>
+            <p>技术支持：</p>
+            <p>微小科技有限公司</p>
+
+        </footer>
+    </div>
+
+</div>
+
+<script>
+    $(function () {
+        $.ajax({
+            url: "json/myOrderJson.json",
+            success: function (data) {
+                for(i=0;i<data.length;i++){
+                    //创建表格
+                    var datai=data[i];
+                    console.log(datai)
+                    var $table1=$("<table>",{
+                        class:"table table-bordered table-condensed"
+                    });
+                    //创建表头
+                    var $thead=$("<thead>");
+                    //创建tr
+                    var $tr=$("<tr>");
+                    //创建th
+                    var $th=$("<th>",{
+                        colspan:"5",
+                        text:"订单号："+datai.orderName,
+                    });
+                    $table1.append($thead.append($tr.append($th)));
+                    var status;
+                    var butval;
+                    //status=0 订单取消
+                    //status=1 等待付款
+                    //status=2 交易完成
+                    if(datai.status==0){
+                        status="订单取消";
+                        butval="删除订单"
+                    };
+                    if(datai.status==1){
+                        status="等待付款"
+                        butval="立即付款"
+                    };
+                    console.log(status+butval);
+                    var $tbody=$("<tbody>");
+                    for(j=0;j<datai.products.length;j++){
+                        var dataij=datai.products[j];
+                        var $tr2=$("<tr>");
+                        var $td1=$("<td>",{
+                            class:"learfix"
+                        });
+                        var $div=$("<div>",{
+                            class:"pull-left"
+                        });
+                        var $img=$("<img>",{
+                            src:dataij.url
+                        });
+                        console.log(dataij.url)
+                        $div.append($img);
+                        $td1.append($div);
+                        var $div2=$("<div>",{
+                            class:"pull-left"
+                        });
+                        var $p1=$("<p>",{
+                            class:"p1",
+                            text:dataij.name
+                        });
+                        var $p2=$("<p>",{
+                            class:"p2",
+                            text:dataij.desc
+                        });
+                        $div2.append($p1);
+                        $div2.append($p2);
+                        $td1.append($div2);
+                        $tr2.append($td1);
+                        var $td2=$("<td>",{
+                            class:"t2",
+                            text:dataij.nub
+                        });
+                        $tr2.append($td2);
+                        var $td3=$("<td>",{
+                            class:"t3",
+                            text:dataij.price+"/个"
+                        });
+                        $tr2.append($td3);
+                        var $td4=$("<td>",{
+                            rowspan:datai.products.length,
+                            text:status
+                        });
+                        var $td5=$("<td>",{
+                            rowspan:datai.products.length,
+                        });
+                        var $div5=$("<div>")
+                        var $but5=$("<button>",{
+                            class:"btn btn-warning",
+                            text:butval
+                        });
+                        var $p5=$("<p>",{
+                            text:"订单详情"
+                        });
+                        if(j==0){
+                            $tr2.append($td4);
+                            $div5.append($but5);
+                            $td5.append($div5)
+                            $td5.append($p5);
+                            $tr2.append($td5);
+                        }
+                        $tbody.append($tr2);
+                        $table1.append($tbody);
+                    }
+                    $("#table").append($table1);
+                }
+            },
+            error: function () {
+                alert("获取订单失败！");
+            }
+        });
+    })
+</script>
+
+</body>
+</html>
