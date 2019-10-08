@@ -437,7 +437,7 @@
         $("#minus").click(function () {
             var num = $("#number").val();
             num--;
-            if (num < 0) {
+            if (num < 1) {
                 num = 1;
             }
             ;
@@ -453,7 +453,7 @@
                 if (goods === sellgoods[i].name) {
                     var num = parseInt($("#number").val());
                     var price = parseInt(sellgoods[i].price);
-                    $("#price").text(num*price);
+                    $("#price").text(price);
                     return;
                 }else {
                     $("#price").text("？");
@@ -476,7 +476,7 @@
                 if (goods === sellgoods[i].name) {
                     var num = parseInt($("#number").val());
                     var price = parseInt(sellgoods[i].price);
-                    $("#price").text(num*price);
+                    $("#price").text(price);
                     return;
                 }else {
                     $("#price").text("？");
